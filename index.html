@@ -139,14 +139,14 @@
 
     // Update the button click handler
     document.getElementById('forgiveButton').addEventListener('click', () => {
-      // Show the message with better font and contrast
+      // Show the message with the new color scheme
       const msg = document.getElementById('message');
       msg.style.display = 'block';
       msg.style.fontFamily = 'Arial, sans-serif';
-      msg.style.backgroundColor = 'rgba(252, 108, 133, 0)';
-      msg.style.color = '#000000';
+      msg.style.backgroundColor = 'rgb(252,108,133)'; // New background color based on the theme
+      msg.style.color = '#fff';                         // White text for clear readability
 
-      // Change background for improved contrast
+      // Change page background for improved contrast
       document.body.style.background = 'linear-gradient(45deg, #ff66b3, #000000)';
 
       // Create an explosion of hearts (increased density)
@@ -162,7 +162,7 @@
         setTimeout(() => heart.remove(), expDuration * 1000);
       }
 
-      // Redirect to surprise.html after 10 seconds
+      // Redirect to surprise.html after 3.3 seconds
       setTimeout(() => {
         window.location.href = 'surprise.html';
       }, 3300);
