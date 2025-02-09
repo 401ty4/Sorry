@@ -145,7 +145,7 @@
         roseImg.style.bottom = '20px';
         roseImg.style.right = '20px';
         roseImg.style.width = '100px';
-        document.body.appendChild(roseImg);
+        document.body.appendChild(roseImg);\
 
            
         // ... (keep the floating elements code the same) ...
@@ -154,7 +154,7 @@
         document.getElementById('forgiveButton').addEventListener('click', () => {
             // Show the message and animations first
             document.getElementById('message').style.display = 'block';
-            document.body.style.background = 'linear-gradient(45deg, #ff66b3, #ff9999)';
+            document.body.style.background = 'linear-gradient(45deg, #ff66b3, #000000)';
             
             // Add explosion of hearts
             for(let i = 0; i < 50; i++) {
@@ -170,7 +170,7 @@
             // Redirect to surprise.html after 1 second
             setTimeout(() => {
                 window.location.href = 'surprise.html';
-            }, 1000);
+            }, 10000);
         });
 
         // ... (keep the rest of the code the same) ...
