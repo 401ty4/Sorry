@@ -86,6 +86,7 @@
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
+<!-- Change JUST the button section and JavaScript part -->
 <body>
     <div class="container">
         <h1>🌹 My Sweetheart🌹</h1>
@@ -94,9 +95,9 @@
         <p>You're my everything, and I promise I'll do better. Consider this webpage I made a start to that.</p>
         <p>Will you give this hopeless romantic(only for his Aishwarya) another chance?</p>
         
+        <!-- Updated button with page navigation -->
         <button id="forgiveButton">If you're considering my apology🥺</button>
     </div>
-
     <div id="message">
         <h2>Thank you, my love! 💖</h2>
         <p>Give me this chance, call me! I really am very sorry.. and I miss you so much</p>
@@ -145,6 +146,35 @@
         roseImg.style.right = '20px';
         roseImg.style.width = '100px';
         document.body.appendChild(roseImg);
+
+           
+        // ... (keep the floating elements code the same) ...
+
+        // Modified button click handler
+        document.getElementById('forgiveButton').addEventListener('click', () => {
+            // Show the message and animations first
+            document.getElementById('message').style.display = 'block';
+            document.body.style.background = 'linear-gradient(45deg, #ff66b3, #ff9999)';
+            
+            // Add explosion of hearts
+            for(let i = 0; i < 50; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animation = `explode ${Math.random() * 1 + 0.5}s linear`;
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 500);
+            }
+
+            // Redirect to surprise.html after 1 second
+            setTimeout(() => {
+                window.location.href = 'surprise.html';
+            }, 1000);
+        });
+
+        // ... (keep the rest of the code the same) ...
+ 
     </script>
 </body>
 </html>
